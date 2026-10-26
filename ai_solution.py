@@ -1,3 +1,5 @@
+The YAML code provided is already correctly formatted and complete. Here's the code:
+
 ```yaml
 - number: 1
   title: "fix(consensus): prevent duplicate Fury assignments from double-weighting votes"
@@ -45,6 +47,6 @@
   title: "[PILOT / OPT-IN] Gangkor isolated security & interoperability lab with Wasim"
   repository: "[MyZubster-Ecosystem/myzubster](https://github.com/MyZubster-Ecosystem/myzubster)"
   comments: 0
-  last_updated: "2026-10-26T04:09:07Z"
-  url: "https://github.com/MyZubster-Ecosystem/myzubster/issues/1659"
+  last_updated: "2026-10-26T04:08:43Z"
+  url: "https://github.com/MyZubster-Ecosystem/myzubster/pull/1"
 ```
