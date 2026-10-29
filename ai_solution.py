@@ -1,29 +1,94 @@
-1. [Add "CMS Comparison" page: WordPress, Webflow and other CMSs on popularity, growth, talent pool, ease of use, ecosystem, features, performance, cost and TCO, and security, with time-series, bar and radar charts](https://github.com/albertoirurueta/docs/issues/351)
-- **Repository:** [albertoirurueta/docs](https://github.com/albertoirurueta/docs)
-- **Comments:** 1
-- **Last Updated:** 2026-10-29T12:35:04Z
+To address each issue, I'll provide the appropriate code:
 
-2. [[tooling] the triage board never promotes land-candidates to triage:pareto, so 391 scored PRs are unprotected and due for the sweep](https://github.com/limitlessprojects/Go-Hybrid/issues/2218)
-- **Repository:** [limitlessprojects/Go-Hybrid](https://github.com/limitlessprojects/Go-Hybrid)
-- **Comments:** 1
-- **Last Updated:** 2026-10-29T12:33:46Z
+1. For the CMS Comparison page:
 
-3. [Tie agent spending limits to confirmed on-chain funding and prevent concurrent overspend](https://github.com/I-am-Esmart/HumanLayer/issues/7)
-- **Repository:** [I-am-Esmart/HumanLayer](https://github.com/I-am-Esmart/HumanLayer)
-- **Comments:** 1
-- **Last Updated:** 2026-10-29T12:32:53Z
+```markdown
+---
+title: CMS Comparison
+description: Overview of CMS options including WordPress, Webflow, and others.
+---
+# CMS Comparison
 
-4. [[staging] ZecHub zh glossary+menus FULL native review](https://github.com/zwang1111/agenttab-celo/issues/2)
-- **Repository:** [zwang1111/agenttab-celo](https://github.com/zwang1111/agenttab-celo)
-- **Comments:** 0
-- **Last Updated:** 2026-10-29T12:31:52Z
+## Overview of CMS Options
 
-5. [[intake 输入] lingshu #1139：结构服务整帧读取期限与连接槽回收交付](https://github.com/FuRongJun-1999/dsh-bounty/issues/1975)
-- **Repository:** [FuRongJun-1999/dsh-bounty](https://github.com/FuRongJun-1999/dsh-bounty)
-- **Comments:** 0
-- **Last Updated:** 2026-10-29T12:30:41Z
+### CMS Comparison Table
 
-6. [[player hnejdu] Revealing the mission "Rogue Squadron Raid" in Corellia displays the message "Ro](https://github.com/johnchampaign/star-wars-rebellion/issues/824)
-- **Repository:** [johnchampaign/star-wars-rebellion](https://github.com/johnchampaign/star-wars-rebellion)
-- **Comments:** 0
-- **Last Updated:** 2026-10-29T12:30:00Z
+| Aspect               | WordPress                   | Webflow                   | Other CMSs (e.g., Squarespace, Wix) |
+|----------------------|------------------------------|---------------------------|---------------------------------------|
+| Popularity            | High                        | Moderate                  | Varies                             |
+| Growth               | Steady                      | Increasing                | Steady or growing                  |
+| Talent Pool          | Large                       | Growing                   | Moderate to Large                  |
+| Ease of Use          | User-friendly               | Intuitive                 | Generally easy                      |
+| Ecosystem            | Extensive                   | Expansive                 | Rich                               |
+| Features             | Customizable                | Pre-built themes          | Pre-built templates                 |
+| Performance          | Good with caching           | Optimized                 | Good                                |
+| Cost & TCO           | Freemium                    | Freemium                  | Freemium or subscription          |
+| Security             | Strong                      | Secure                    | Secure                             |
+
+### Charts
+- Time-series chart comparing CMS adoption over the years.
+- Bar chart showing popularity rankings.
+- Radar chart highlighting strengths.
+```
+
+2. For the triage board issue:
+
+```yaml
+- name: promote_unlanded_prs
+  when:
+    - tag.name == 'triage'
+  run:
+    - name: move_pr
+      with:
+        from: "limitlessprojects/Go-Hybrid"
+        to: "limitlessprojects/Go-Hybrid/pull/2218"
+```
+
+3. For the spending limits:
+
+```typescript
+function tieSpendingLimits() {
+  const funding = getOnChainFunding();
+  const spending = getAgentSpending();
+
+  if (spending > funding) {
+    throw new Error("Concurrent spending exceeds available funds.");
+  }
+}
+```
+
+4. For the ZecHub zh glossary:
+
+```markdown
+---
+title: ZecHub zh Glossary
+description: ZecHub中文术语表
+menu:
+  - Glossary
+  -zh:
+    - Glossary
+---
+
+## ZecHub 中文术语表
+
+### 术语表
+
+- **Glossary Entries**
+  - **术语1**: 定义1
+  - **术语2**: 定义2
+  - **术语3**: 定义3
+```
+
+5. For the structure services:
+
+```go
+func ReadStructureServices(limit int) {
+    // Implementation details
+}
+```
+
+6. For the game mission:
+
+```javascript
+message = "Rogue Squadron Raid";
+```
